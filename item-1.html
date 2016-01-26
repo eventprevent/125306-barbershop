@@ -7,11 +7,13 @@
   <body>
     <header class="main-header">
       <div class="container">
+        <div class="icon-logo">
+          <a href="index.html">
+            <img src="http://placehold.it/125x35" width="125" height="35" alt="Barbershop">
+          </a>
+        </div>
         <nav class="main-navigation">
           <ul>
-            <li>
-              <a href="index.html">Barbershop</a>
-            </li>
             <li>
               <a href="#">Информация</a>
             </li>
@@ -36,12 +38,20 @@
     </header>
     <main class="container">
       <h1 class="index-title">Набор для путешествий «Baxter of California»</h1>
-      <div class="breadcrumbs">
-        <a href="#">Главная</a>
-        <a href="#">Магазин</a>
-        <a href="#">Средства для ухода</a>
-        <a class="active" href="#">Набор для путешествий «Baxter of California»</a>
-      </div>
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>
+          <a href="#">Магазин</a>
+        </li>
+        <li>
+          <a href="#">Средства для ухода</a>
+        </li>
+        <li class="active">
+          Набор для путешествий «Baxter of California»
+        </li>
+      </ul>
       <div class="gallery-container">
         <figure class="item-gallery active">
           <img src="http://placehold.it/460x500" width="460" height="500" alt="Набор для путешествий «Baxter of California»">
@@ -57,11 +67,13 @@
         </figure>
       </div>
       <div class="description-container">
-        <div class="left">
-          Есть в наличии
-        </div>
-        <div class="right">
-          Артикул: dexter-ae
+        <div class="item-code">
+          <div class="left">
+            Есть в наличии
+          </div>
+          <div class="right">
+            Артикул: dexter-ae
+          </div>
         </div>
         <section class="item-about">
           Travel Kit – необходимый аксессуар во время любого путешествия.
@@ -71,7 +83,7 @@
            также может стать отличным подарком.
         </section>
         <div class="item-buy">
-          <span>2 900 руб.</span>
+          <div class="item-price">2 900 руб.</div>
           <a class="btn" href="#">Купить</a>
         </div>
         <section class="item-about">
