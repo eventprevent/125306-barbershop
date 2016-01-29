@@ -20,3 +20,152 @@ h1 {
 h2 {
   font-size: 24px;
 }
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  float: left;
+  width: 620px;
+}
+
+.user-block {
+  float: right;
+  width: 140px;
+}
+
+.container-index {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.index-logo {
+  width: 368px;
+  height: 204px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.features {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-content {
+  margin-bottom: 35px;
+  padding: 50px 80px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+}
+
+.footer-social {
+  float: left;
+  margin-left: 60px;
+  width: 180px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 160px;
+}
+
+/*====================CATALOG======================*/
+
+.icon-logo {
+  float: left;
+  width: 111px; /*width: 140px or */
+  height: 24px;
+  padding-left: 15px;
+  padding-right: 34px;
+}
+
+.container-catalog,
+.container-item {
+  padding-top: 55px;
+  padding-bottom: 50px;
+}
+
+.filter-container {
+  float: left;
+  width: 220px;
+}
+
+.item-container {
+  float: right;
+  width: 700px;
+}
+
+.item {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+}
+
+.item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.pagination {
+  float: left;
+  width: 220px;
+}
+
+/*=======================ITEM-PAGE==============================*/
+
+.gallery-container {
+  float: left;
+  width: 460px;
+}
+
+.description-container {
+  float: right;
+  width: 400px;
+}
+
+.item-gallery {
+  float: left;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.item-gallery:nth-child(3n+1) {
+  margin-right: 0;
+}
