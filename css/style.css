@@ -172,3 +172,13 @@ h2 {
 .gallery-photo li:last-child {
   margin-right: 0;
 }
+
+.left {
+  float: left;
+  width: 150px;
+}
+
+.right {
+  float: right;
+  width: 220px;
+}
