@@ -160,12 +160,16 @@ h2 {
   width: 400px;
 }
 
-.item-gallery {
+.gallery-photo {
+  padding: 0;
+}
+
+.gallery-photo li {
   float: left;
   margin: 0;
   margin-right: 20px;
 }
 
-.item-gallery:nth-child(3n+1) {
+.gallery-photo li:last-child {
   margin-right: 0;
 }
