@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -46,13 +48,13 @@
         <li>
           <a href="#">Магазин</a>
         </li>
-        <li class="active">
+        <li>
           Средства для ухода
         </li>
       </ul>
       <div class="filter-container">
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-          <div>
+          <div class="brand-filter">
             <h2 class="filter-title">Производители:</h2>
             <input type="checkbox" name="brand-1" id="choice-1" checked>
             <label for="choice-1">Baxter of California</label>
@@ -67,7 +69,7 @@
             <input type="checkbox" name="brand-6" id="choice-6" checked>
             <label for="choice-6">American crew</label>
           </div>
-          <div>
+          <div class="group-filter">
             <h2 class="filter-title">Группы товаров:</h2>
             <input type="radio" name="item-group" value="item-1" id="radio-1">
             <label for="radio-1">Бритвенные принадлежности</label>
@@ -75,8 +77,8 @@
             <label for="radio-2">Средства для ухода</label>
             <input type="radio" name="item-group" value="item-3" id="radio-3">
             <label for="radio-3">Аксессуары</label>
-            <button class="btn" type="submit">Показать</button>
           </div>
+          <button class="btn" type="submit">Показать</button>
         </form>
       </div>
       <div class="item-container">
@@ -88,7 +90,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="item-1.html">Набор для путешествий <span>«Baxter of California»</span></a>
+              <a href="item-1.html">Набор для путешествий<br>
+                <span>«Baxter of California»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">2 900 руб.</div>
@@ -102,7 +106,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="#">Увлажняющий кондиционер <span>«Baxter of California»</span></a>
+              <a href="#">Увлажняющий кондиционер<br>
+                <span>«Baxter of California»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">750 руб.</div>
@@ -116,7 +122,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="#">Гель для волос <span>«Suavecito»</span></a>
+              <a href="#">Гель для волос<br>
+                <span>«Suavecito»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">290 руб.</div>
@@ -130,7 +138,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="#">Глина для укладки волос <span>«American crew»</span></a>
+              <a href="#">Глина для укладки волос<br>
+                <span>«American crew»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">500 руб.</div>
@@ -144,7 +154,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="#">Гель для волос <span>«American crew»</span></a>
+              <a href="#">Гель для волос<br>
+                <span>«American crew»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">300 руб.</div>
@@ -158,7 +170,9 @@
               </a>
             </div>
             <div class="item-title">
-              <a href="#">Набор для бритья <span>«Baxter of California»</span></a>
+              <a href="#">Набор для бритья<br>
+                <span>«Baxter of California»</span>
+              </a>
             </div>
             <div class="item-buy">
               <div class="item-price">3 900 руб.</div>
@@ -182,7 +196,7 @@
         </ul>
       </div>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer catalog-footer">
       <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>
