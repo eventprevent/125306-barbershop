@@ -483,8 +483,6 @@ h2 {
   color: #aba9a7;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 700;
-  font-family: 'PT Sans Narrow', Arial, sans-serif;
 }
 
 .breadcrumbs li:first-child {
@@ -636,8 +634,6 @@ h2 {
   background-color: #e5e5e5;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 700;
-  font-family: 'PT Sans Narrow', Arial, sans-serif;
   color: #000000;
 }
 
@@ -648,8 +644,6 @@ h2 {
   padding: 12px 0;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 700;
-  font-family: 'PT Sans Narrow', Arial, sans-serif;
 }
 
 .pagination {
