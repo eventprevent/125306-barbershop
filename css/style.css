@@ -157,6 +157,7 @@ h2 {
   position: absolute;
   left: 50%;
   bottom: 0;
+  -webkit-transform: translateX(-50%) rotate(45deg);
   transform: translateX(-50%) rotate(45deg);
 }
 
@@ -369,6 +370,7 @@ h2 {
   left: 50%;
   width: 25px;
   height: 25px;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: transparent url("../img/sprite.png") no-repeat;
 }
@@ -450,11 +452,10 @@ h2 {
 .main-navigation .active::after {
   content: "";
   position: absolute;
-  width: 56%;
-  height: 4px;
+  left: 20px;
+  right: 20px;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 4px;
   background-color: #ffffff;
 }
 
@@ -527,16 +528,18 @@ h2 {
   display: none;
 }
 
-.filter-form label {
+.filter-form label,
+.modal-login label {
   position: relative;
   display: block;
   color: #000000;
-  padding: 0 43px;
+  padding-left: 43px;
   margin-bottom: 17px;
   cursor: pointer;
 }
 
-.filter-form label::before {
+.filter-form label::before,
+.modal-login label::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -551,7 +554,8 @@ h2 {
   margin-bottom: 50px;
 }
 
-.brand-filter input:checked + label::before {
+.brand-filter input:checked + label::before,
+.modal-login input:checked + label::before {
   background: #f9f6f3 url("../img/sprite.png") no-repeat;
   background-position: -78px -3px;
 }
@@ -774,19 +778,19 @@ h2 {
   margin-bottom: 60px;
 }
 
-.item-about ul {
+.style-rhombus {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.item-about li {
+.style-rhombus li {
   position: relative;
   display: block;
   padding-left: 20px;
 }
 
-.item-about li::before {
+.style-rhombus li::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -796,4 +800,249 @@ h2 {
   top: 50%;
   margin-top: -4px;
   transform: rotate(45deg);
+}
+
+/*======================================PRICE-LIST======================================*/
+
+.big-heading {
+  position: relative;
+  margin: 45px 0 60px;
+  text-align: center;
+}
+
+.big-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-top: -1px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.big-heading h2 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0 25px;
+  background: url('../img/bg-content.png');
+}
+
+.inner-columns {
+  margin: 60px 0;
+  color: #000000;
+}
+
+.inner-columns p {
+  margin: 14px 0;
+}
+
+.inner-columns table {
+  border-collapse: collapse;
+}
+
+.inner-columns td {
+  padding: 10px 15px;
+
+  border: 2px solid #000000;
+}
+
+.inner-columns h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+
+.inner-column-left {
+  float: left;
+  width: 460px;
+}
+
+.inner-column-right {
+  float: right;
+  width: 460px;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+  margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+  margin-bottom: 0;
+}
+
+.inner-column-left li {
+  margin-bottom: 18px;
+}
+
+.prices-table {
+  width: 100%;
+}
+
+.prices-table td {
+  width: 50%;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+.short-text {
+  padding-right: 70px;
+}
+
+/*====================================MODAL-WINDOWS==================================*/
+
+.modal-login {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-left: -230px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 300px;
+  padding: 50px 80px 55px;
+  background: #f9f6f3 url('../img/bg-content.png');
+  color: #000000;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
+}
+
+.modal-login.error {
+  animation: error 0.5s;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: -35px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-image:
+    linear-gradient(to bottom, transparent 10px, #d0d0d0 10px, #d0d0d0 15px, transparent 15px),
+    linear-gradient(to right, transparent 10px, #d0d0d0 10px, #d0d0d0 15px, transparent 15px);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal-login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-login input[type="text"],
+.modal-login input[type="password"] {
+  display: block;
+  width: 241px;
+  padding: 8px 40px 8px 15px;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+  background-color: #f9f6f3;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+  outline: none;
+}
+
+.modal-login input[type="text"]:focus,
+.modal-login input[type="password"]:focus {
+  border-color: #663d15;
+}
+
+.modal-login input[type="checkbox"] {
+  display: none;
+}
+
+.modal-login label {
+  padding-left: 30px;
+  float: left;
+  margin-top: 5px;
+}
+
+.forget-password {
+  float: right;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.modal-login .btn {
+  width: 100%;
+  clear: both;
+}
+
+.modal-map {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 766px;
+  height: 561px;
+  margin-left: -383px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #e9e5dc url('../img/map-bg.jpg') no-repeat;
+  border: 7px solid #ffffff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
+}
+
+.modal-map .modal-close {
+  top: -2px;
+  right: -42px;
+}
+
+.show-window {
+  display: block;
+  animation: popap 0.6s;
+}
+
+/*=========================================ANIMATION===================================*/
+
+@keyframes popap {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
+  90% {
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes error {
+  0%, 100% {
+    -webkit-transform: translateY(-50%) rotate(0);
+    transform: translateY(-50%) rotate(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateY(-50%) rotate(3deg);
+    transform: translateY(-50%) rotate(3deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateY(-50%) rotate(-3deg);
+    transform: translateY(-50%) rotate(-3deg);
+  }
 }
